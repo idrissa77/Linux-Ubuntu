@@ -1,0 +1,136 @@
+EXERCICE1:
+1/  idrissa77@idrissa77-VGN-CR21Z-R:~$ hostname
+ resultat: idrissa77-VGN-CR21Z-R
+2/ cal -y
+
+3/  date +"%d-%m-%y"
+resulta:  22-01-22
+ou 
+date 
+resultat : sam. 22 janv. 2022 20:05:47 CET
+4/ whoami
+idrissa77
+5/ pwd
+result: /home/idrissa77
+6/ ls
+result: Bureau     Images   Musique  snap             Vidéos
+Documents  Modèles  Public   Téléchargements
+Les éléments listés sont les dossiers contenus dans le repertoire courant.
+Ils sont en bleus.
+Les options les plus interressantes sont : cd Bureau/ cd Images/ cd Videos/ pour acceder aux dossiers Bureau ou Images ou Vidéos
+
+EXERCICE2:
+1/ idrissa77@idrissa77-VGN-CR21Z-R:~$ cd /var/log
+idrissa77@idrissa77-VGN-CR21Z-R:/var/log$ ls
+alternatives.log  dmesg.1.gz       kern.log
+apt               dmesg.2.gz       lastlog
+auth.log          dpkg.log         openvpn
+boot.log          faillog          private
+bootstrap.log     fontconfig.log   speech-dispatcher
+btmp              gdm3             sssd
+cups              gpu-manager.log  syslog
+dist-upgrade      hp               ubuntu-advantage.log
+dmesg             installer        unattended-upgrades
+dmesg.0           journal          wtmp
+
+1/ (suite) 2 reps contenus dans ce fichiers sont : gdm3 , sssd
+2/ idrissa77@idrissa77-VGN-CR21Z-R:/var/log$ cd apt/
+ Il y a 3 fichiers dans ce répertoire.
+idrissa77@idrissa77-VGN-CR21Z-R:/var/log/apt$ ls
+eipp.log.xz  history.log  term.log
+3/   idrissa77@idrissa77-VGN-CR21Z-R:/var/log/apt$ cd ..
+On retourne dans le dossier précédent.
+4/ idrissa77@idrissa77-VGN-CR21Z-R:/var/log$ cd ~
+resulat : idrissa77@idrissa77-VGN-CR21Z-R:~$  on retourne dans le tout prémier dossier
+4/ idrissa77@idrissa77-VGN-CR21Z-R:~$ cd /
+on accède au dossier "racine".
+5/ idrissa77@idrissa77-VGN-CR21Z-R:/$ cd etc/
+idrissa77@idrissa77-VGN-CR21Z-R:/etc$ 
+
+idrissa77@idrissa77-VGN-CR21Z-R:/etc$ ls -d s*
+
+sane.d         shadow             ssl        sudoers
+security       shadow-            sssd       sudoers.d
+selinux        shells             subgid     sudo_logsrvd.conf
+sensors3.conf  skel               subgid-    sysctl.conf
+sensors.d      snmp               subuid     sysctl.d
+services       speech-dispatcher  subuid-    systemd
+sgml           ssh                sudo.conf
+
+9/ idrissa77@idrissa77-VGN-CR21Z-R:/etc$ cd X11/
+idrissa77@idrissa77-VGN-CR21Z-R:/etc/X11$
+idrissa77@idrissa77-VGN-CR21Z-R:/etc/X11$ ls
+app-defaults             xkb          Xsession.d
+cursors                  xorg.conf.d  Xsession.options
+default-display-manager  Xreset       xsm
+fonts                    Xreset.d     XvMCConfig
+rgb.txt                  Xresources   Xwrapper.config
+xinit                    Xsession
+
+9/ idrissa77@idrissa77-VGN-CR21Z-R:/etc/X11$ cp xorg.conf ~
+cp: impossible d'évaluer 'xorg.conf': Aucun fichier ou dossier de ce type
+idrissa77
+9.1/ idrissa77@idrissa77-VGN-CR21Z-R:/etc/X11$ cd ~
+idrissa77@idrissa77-VGN-CR21Z-R:~$ 
+9.2/ syntaxe: cp -r /répertoire_source /répertoire_destination
+exemple: Le dossier photo est dans "Images"
+Maintenant ça copie , et dossier "Images" dans  "Bureau"
+Bien sûr le dossier "Images" a été copié avec son contenu i.e le dossier "photo"
+idrissa77@idrissa77-VGN-CR21Z-R:~$ cp -r /home/idrissa77/Images /home/idrissa77/Bureau
+
+EXERCICE3:
+1/ idrissa77@idrissa77-VGN-CR21Z-R:~$ touch bidon.test
+idrissa77@idrissa77-VGN-CR21Z-R:~$ ls
+bidon.test  Documents  Modèles  Public  Téléchargements
+Bureau      Images     Musique  snap    Vidéos
+ ça crée le fichier bidon.test (les autres sont des dossiers mais lui c'est un fichier)
+2/  idrissa77@idrissa77-VGN-CR21Z-R:~$ mv bidon.test bidon.test.new
+idrissa77@idrissa77-VGN-CR21Z-R:~$ ls
+bidon.test.new  Documents  Modèles  Public  Téléchargements
+Bureau          Images     Musique  snap    Vidéos
+bidon.test est rénommé par bidon.test.new
+ 3/  idrissa77@idrissa77-VGN-CR21Z-R:~$ mv bidon.test.new /tmp
+idrissa77@idrissa77-VGN-CR21Z-R:~$ ls
+Bureau     Images   Musique  snap             Vidéos
+Documents  Modèles  Public   Téléchargements
+idrissa77@idrissa77-VGN-CR21Z-R:~$ cd /tmp
+idrissa77@idrissa77-VGN-CR21Z-R:/tmp$ ls
+bidon.test.new
+dbus-qLuh6K3ZE8
+lu5022q2hoy9.tmp
+OSL_PIPE_1000_SingleOfficeIPC_2de179924fb443f9ebd611326391f1ef
+snap.firefox
+snap.snap-store
+systemd-private-63a73fa63fe443a6a62655e81eb58e24-colord.service-dfiMS2
+systemd-private-63a73fa63fe443a6a62655e81eb58e24-fwupd.service-QVqXAh
+systemd-private-63a73fa63fe443a6a62655e81eb58e24-ModemManager.service-xduAnt
+systemd-private-63a73fa63fe443a6a62655e81eb58e24-power-profiles-daemon.service-xfa7Cj
+systemd-private-63a73fa63fe443a6a62655e81eb58e24-switcheroo-control.service-Xh3Lm5
+systemd-private-63a73fa63fe443a6a62655e81eb58e24-systemd-logind.service-Gjm4bP
+systemd-private-63a73fa63fe443a6a62655e81eb58e24-systemd-resolved.service-nqkXZS
+systemd-private-63a73fa63fe443a6a62655e81eb58e24-systemd-timesyncd.service-K6JzVP
+systemd-private-63a73fa63fe443a6a62655e81eb58e24-upower.service-92RPTK
+tracker-extract-3-files.1000
+idrissa77@idrissa77-VGN-CR21Z-R:/tmp$ 
+4/  idrissa77@idrissa77-VGN-CR21Z-R:/tmp$ rm bidon.test.new
+idrissa77@idrissa77-VGN-CR21Z-R:/tmp$ ls
+dbus-qLuh6K3ZE8
+lu5022q2hoy9.tmp
+OSL_PIPE_1000_SingleOfficeIPC_2de179924fb443f9ebd611326391f1ef
+snap.firefox
+snap.snap-store
+systemd-private-63a73fa63fe443a6a62655e81eb58e24-colord.service-dfiMS2
+systemd-private-63a73fa63fe443a6a62655e81eb58e24-fwupd.service-QVqXAh
+systemd-private-63a73fa63fe443a6a62655e81eb58e24-ModemManager.service-xduAnt
+systemd-private-63a73fa63fe443a6a62655e81eb58e24-power-profiles-daemon.service-xfa7Cj
+systemd-private-63a73fa63fe443a6a62655e81eb58e24-switcheroo-control.service-Xh3Lm5
+systemd-private-63a73fa63fe443a6a62655e81eb58e24-systemd-logind.service-Gjm4bP
+systemd-private-63a73fa63fe443a6a62655e81eb58e24-systemd-resolved.service-nqkXZS
+systemd-private-63a73fa63fe443a6a62655e81eb58e24-systemd-timesyncd.service-K6JzVP
+systemd-private-63a73fa63fe443a6a62655e81eb58e24-upower.service-92RPTK
+tracker-extract-3-files.1000
+Cette commande supprime le fichier bidon.test.new
+
+5/ rm -r fichier
+
+

@@ -1,0 +1,134 @@
+EXERCICE 1 : 1/
+idrissa77@idrissa77-VGN-CR21Z-R:/etc$ tail -c -10 services
+ services
+2/ idrissa77@idrissa77-VGN-CR21Z-R:/etc$ tail -c -9 services
+services
+3/
+idrissa77@idrissa77-VGN-CR21Z-R:/etc$ tail -n -7 services
+asp		27374/udp
+csync2		30865/tcp			# cluster synchronization tool
+dircproxy	57000/tcp			# Detachable IRC Proxy
+tfido		60177/tcp			# fidonet EMSI over telnet
+fido		60179/tcp			# fidonet EMSI over TCP
+
+# Local services
+
+4/
+idrissa77@idrissa77-VGN-CR21Z-R:/etc$ head -c +4 services
+# Neidrissa77@idrissa77-VGN-CR21Z-R:/etc$ 
+
+5/
+  idrissa77@idrissa77-VGN-CR21Z-R:/etc$ head -c +20 services
+# Network services, idrissa77@idrissa77-VGN-CR21Z-R:/etc$ 
+
+EXERCICE 2 : 
+1/
+ idrissa77@idrissa77-VGN-CR21Z-R:/etc$ cd
+idrissa77@idrissa77-VGN-CR21Z-R:~$ cd Bureau/
+idrissa77@idrissa77-VGN-CR21Z-R:~/Bureau$ touch {rapport,graph}_{jan,fev,mar}
+2/  idrissa77@idrissa77-VGN-CR21Z-R:~/Bureau$ mkdir -p rapport/projet
+3/  
+idrissa77@idrissa77-VGN-CR21Z-R:~/Bureau$ cd rapport/
+idrissa77@idrissa77-VGN-CR21Z-R:~/Bureau/rapport$ mkdir -p rapport/copie
+idrissa77@idrissa77-VGN-CR21Z-R:~/Bureau/rapport$ 
+4/
+idrissa77@idrissa77-VGN-CR21Z-R:~/Bureau$ mkdir graphs
+idrissa77@idrissa77-VGN-CR21Z-R:~/Bureau$ mv graph_jan graphs/
+idrissa77@idrissa77-VGN-CR21Z-R:~/Bureau$ ls
+:          graph_mar  p        rapport_fev  rapport_mar
+graph_fev  graphs     rapport  rapport_jan
+idrissa77@idrissa77-VGN-CR21Z-R:~/Bureau$ mv graph_fev graph_mar graphs/
+5/
+idrissa77@idrissa77-VGN-CR21Z-R:~/Bureau$ ls
+:  graphs  p  rapport  rapport_fev  rapport_jan  rapport_mar
+6/   
+idrissa77@idrissa77-VGN-CR21Z-R:~/Bureau$ mv rapport_jan rapport_fev rapport/
+idrissa77@idrissa77-VGN-CR21Z-R:~/Bureau$ rm rapport_mar
+
+EXERCICE 3: 
+ 1/  idrissa77@idrissa77-VGN-CR21Z-R:~$ cat > test
+Bonjour tout le monde
+ 2/    idrissa77@idrissa77-VGN-CR21Z-R:~$ cat >> test
+au revoir
+3/  idrissa77@idrissa77-VGN-CR21Z-R:~$ find /etc -name hosts
+find: ‘/etc/sssd’: Permission non accordée
+find: ‘/etc/cups/ssl’: Permission non accordée
+find: ‘/etc/polkit-1/localauthority’: Permission non accordée
+find: ‘/etc/ssl/private’: Permission non accordée
+/etc/avahi/hosts
+/etc/hosts
+Oui, il ya des messages d'erreurs qui s'affichent.
+idrissa77@idrissa77-VGN-CR21Z-R:~$ find /etc -name hosts 2>err.txt
+/etc/avahi/hosts
+/etc/hosts
+
+4/  idrissa77@idrissa77-VGN-CR21Z-R:~$ find /etc -name hosts > st.out 2>std.err
+EXERCICE 4: 
+1/ idrissa77@idrissa77-VGN-CR21Z-R:~$ find -name *sh
+./.local/share/Trash
+./.local/share/evolution/tasks/trash
+./.local/share/evolution/memos/trash
+./.local/share/evolution/calendar/trash
+./.local/share/evolution/addressbook/trash
+./.local/share/evolution/mail/trash
+./.cache/evolution/sources/trash
+./.cache/evolution/tasks/trash
+./.cache/evolution/memos/trash
+./.cache/evolution/calendar/trash
+./.cache/evolution/addressbook/trash
+./.cache/evolution/mail/trash
+2 /
+idrissa77@idrissa77-VGN-CR21Z-R:~$ find /home -atime +20
+3/
+idrissa77@idrissa77-VGN-CR21Z-R:~$ find /usr ~ -size +10M
+/usr/share/fonts/truetype/arphic/uming.ttc
+/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc
+/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc
+/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc
+/usr/share/fonts/opentype/noto/NotoSerifCJK-Bold.ttc
+/usr/sbin/zsysd
+/usr/bin/snap
+/usr/lib/locale/locale-archive
+/usr/lib/udev/hwdb.bin
+/usr/lib/gcc/x86_64-linux-gnu/11/cc1
+/usr/lib/modules/5.13.0-19-generic/kernel/drivers/gpu/drm/amd/amdgpu/amdgpu.ko
+/usr/lib/firmware/qcom/sm8250/adsp.mbn
+/usr/lib/firmware/liquidio/lio_23xx_vsw.bin
+/usr/lib/firmware/mrvl/prestera/mvsw_prestera_fw-v3.0.img
+/usr/lib/firmware/mrvl/prestera/mvsw_prestera_fw-v2.0.img
+/usr/lib/libreoffice/program/libsclo.so
+/usr/lib/libreoffice/program/libmergedlo.so
+/usr/lib/libreoffice/program/libswlo.so
+/usr/lib/snapd/snapd
+/usr/lib/x86_64-linux-gnu/dri/nouveau_dri.so
+/usr/lib/x86_64-linux-gnu/dri/nouveau_vieux_dri.so
+/usr/lib/x86_64-linux-gnu/dri/i965_dri.so
+/usr/lib/x86_64-linux-gnu/dri/zink_dri.so
+/usr/lib/x86_64-linux-gnu/dri/r200_dri.so
+/usr/lib/x86_64-linux-gnu/dri/iris_dri.so
+/usr/lib/x86_64-linux-gnu/dri/d3d12_dri.so
+/usr/lib/x86_64-linux-gnu/dri/i915_dri.so
+/usr/lib/x86_64-linux-gnu/dri/r600_dri.so
+/usr/lib/x86_64-linux-gnu/dri/swrast_dri.so
+/usr/lib/x86_64-linux-gnu/dri/vmwgfx_dri.so
+/usr/lib/x86_64-linux-gnu/dri/radeonsi_dri.so
+/usr/lib/x86_64-linux-gnu/dri/radeon_dri.so
+/usr/lib/x86_64-linux-gnu/dri/kms_swrast_dri.so
+/usr/lib/x86_64-linux-gnu/dri/r300_dri.so
+/usr/lib/x86_64-linux-gnu/dri/i830_dri.so
+/usr/lib/x86_64-linux-gnu/dri/virtio_gpu_dri.so
+/usr/lib/x86_64-linux-gnu/libwebkit2gtk-4.0.so.37.55.3
+/usr/lib/x86_64-linux-gnu/libmozjs-78.so.78.13.0
+/usr/lib/x86_64-linux-gnu/libjavascriptcoregtk-4.0.so.18.19.5
+/usr/lib/x86_64-linux-gnu/libicudata.so.67.1
+/usr/lib/x86_64-linux-gnu/libLLVM-12.so.1
+/usr/lib/x86_64-linux-gnu/librsvg-2.so.2.47.0
+/usr/lib/x86_64-linux-gnu/libpinyin/data/bigram.db
+/usr/lib/x86_64-linux-gnu/libpinyin/data/pinyin_index.bin
+/usr/lib/x86_64-linux-gnu/libgs.so.9.54
+/home/idrissa77/snap/firefox/common/.mozilla/firefox/6i9bsegj.default/storage/permanent/chrome/idb/3870112724rsegmnoittet-es.sqlite
+4/ idrissa77@idrissa77-VGN-CR21Z-R:~$ find /bin -perm 755
+idrissa77@idrissa77-VGN-CR21Z-R:~$
+
+
+
